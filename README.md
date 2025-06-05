@@ -1,6 +1,7 @@
 # Smart Crypto Investment Assistant
 
 A React-based web application that serves as a cryptocurrency investment assistant with blockchain integration and AI-powered recommendations.
+(This project is just for educational purposes only, do not proceed to use this project's advice for investment)
 
 ## Features
 
