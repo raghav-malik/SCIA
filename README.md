@@ -1,6 +1,71 @@
-# Getting Started with Create React App
+# Smart Crypto Investment Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application that serves as a cryptocurrency investment assistant with blockchain integration and AI-powered recommendations.
+
+## Features
+
+- Real-time cryptocurrency price tracking via CoinGecko API
+- Risk profile assessment using AI (Google's Gemini API)
+- Portfolio recommendations based on risk profile
+- Ethereum wallet integration via MetaMask
+- Investment vault for depositing and withdrawing funds
+- Investment simulation and visualization
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- MetaMask browser extension
+- Google Gemini API key (for AI features)
+- CoinGecko API key (optional, for higher rate limits)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/smart-crypto-assistant.git
+   cd smart-crypto-assistant
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory with the following:
+   ```
+   # CoinGecko API Key (optional)
+   REACT_APP_COINGECKO_API_KEY=your_coingecko_api_key_here
+   
+   # Gemini API Key (required for server.js)
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. Start the backend server:
+   ```
+   npm run server
+   ```
+
+5. In a separate terminal, start the frontend:
+   ```
+   npm start
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+
+## API Keys
+
+### CoinGecko API
+- The app will work without a CoinGecko API key, but you may encounter rate limiting.
+- For better reliability, get a free API key at [CoinGecko API Pricing](https://www.coingecko.com/en/api/pricing).
+- Add your API key to the `.env` file.
+
+### Gemini API
+- Required for the risk profile and portfolio recommendation features.
+- Get a key at [Google AI Studio](https://ai.google.dev/).
+- Add your API key to the `.env` file.
 
 ## Available Scripts
 
@@ -11,33 +76,18 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm run server`
+
+Runs the backend server for AI-powered recommendations.\
+The server runs on [http://localhost:5000](http://localhost:5000).
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Builds the app for production to the `build` folder.
 
 ## Learn More
 
